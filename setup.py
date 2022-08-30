@@ -7,10 +7,7 @@ import datetime
 from setuptools import setup, find_packages
 from setuptools.command.install import install
 
-try:
-    readme = open('README.md').read()
-except:
-    readme = '''# Hotswap for Python
+readme = '''# Hotswap for Python
 
 # Install
 
