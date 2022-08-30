@@ -30,6 +30,9 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install build
+    - name: Check PlatformIO
+      run: |
+        pio system info
     - name: Build package
       run: python -m build
     - name: Publish package
