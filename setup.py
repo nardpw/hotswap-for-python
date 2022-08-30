@@ -15,7 +15,7 @@ VERSION += "_" + datetime.datetime.now().strftime('%Y%m%d%H%M')[2:]
 
 setup(
     # Metadata
-    name='hotswapping',
+    name='hotswap',
     version=VERSION,
     author='nardpw',
     author_email='',
