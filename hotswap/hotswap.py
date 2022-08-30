@@ -77,8 +77,12 @@ def hotswap(path: Path):
     if not spec:
         return
 
-    module = importlib.util.module_from_spec(spec)
     exist = module_from_path(filepath=path.absolute())
+
+    if exist is None:
+        return
+
+    module = importlib.util.module_from_spec(spec)
 
     loader: SourceFileLoader = spec.loader
 
@@ -87,9 +91,7 @@ def hotswap(path: Path):
     except:
         LOGGER.warning(f'failed hot-swapping {path}')
         return
-
-    if exist:
-        override(exist, module)
+    override(exist, module)
 
 
 event_handler = EventHandler(lambda x: hotswap(Path(x)))

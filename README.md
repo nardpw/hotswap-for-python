@@ -2,7 +2,7 @@
 
 # Install
 
-`pip install hotswap`
+`pip install hotcodeswap`
 
 # Usage
 

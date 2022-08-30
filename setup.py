@@ -10,13 +10,11 @@ from setuptools.command.install import install
 
 readme = Path('README.md').read_text()
 
-VERSION = '1.0.0'
-
-VERSION += "_" + datetime.datetime.now().strftime('%Y%m%d%H%M')[2:]
+VERSION = '1.0.1'
 
 setup(
     # Metadata
-    name='hotswap',
+    name='hotcodeswap',
     version=VERSION,
     author='nardpw',
     author_email='',
