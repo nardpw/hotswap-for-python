@@ -7,7 +7,7 @@ import datetime
 from setuptools import setup, find_packages
 from setuptools.command.install import install
 
-readme = open('README.md').read()
+readme = open('./README.md').read()
 
 VERSION = '1.0.0'
 
