@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 readme = Path("README.md").read_text()
 
-VERSION = "1.1.0"
+VERSION = "1.1.1"
 
 setup(
     # Metadata

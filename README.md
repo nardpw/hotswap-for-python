@@ -1,14 +1,18 @@
 # Hotswap for Python
 
-# Install
+<!-- badge.fury.io -->
+[![PyPI version](https://badge.fury.io/py/hotcodeswap.svg)](https://badge.fury.io/py/hotcodeswap)
+
+## Install
 
 `pip install hotcodeswap`
 
-# Usage
+## Usage
 
 Decorate the main function with @hotswap.main
 
-# Example
+## Example
+
 ```python
 import hotswap
 from time import sleep
