@@ -40,6 +40,7 @@ def override(a: object, b: object):
                 delattr(a, x)
             except:
                 pass
+
     for x in dir(b):
         if x.startswith("__"):
             continue
@@ -60,15 +61,22 @@ def module_from_path(path: Path) -> Optional[ModuleType]:
     for mod in sys.modules.values():
         if not hasattr(mod, "__file__"):
             continue
+
         if mod.__file__ is None:
             continue
-        if Path(mod.__file__) == path:
-            return mod
+
+        if Path(mod.__file__).absolute() != path:
+            continue
+
+        return mod
+
+    return None
 
 
-def hotswap(path: Path):
+def hotswap(path: Path) -> None:
     if not path.exists():
         return
+
     if not path.is_file():
         return
 
